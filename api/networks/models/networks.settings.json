@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "networks",
+  "info": {
+    "name": "Networks"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "symbol": {
+      "type": "string"
+    },
+    "chainId": {
+      "type": "integer"
+    },
+    "strategies": {
+      "collection": "strategy",
+      "via": "network"
+    }
+  }
+}

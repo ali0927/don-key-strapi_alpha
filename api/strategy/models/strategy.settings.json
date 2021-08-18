@@ -18,6 +18,9 @@
     "description": {
       "type": "text"
     },
+    "active": {
+      "type": "boolean"
+    },
     "strategyImage": {
       "model": "file",
       "via": "related",
@@ -47,6 +50,10 @@
     "farmer": {
       "via": "strategies",
       "model": "farmers"
+    },
+    "network": {
+      "via": "strategies",
+      "model": "networks"
     }
   }
 }
