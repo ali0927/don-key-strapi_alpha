@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "farmers",
+  "info": {
+    "name": "Farmers"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "telegram": {
+      "type": "string"
+    },
+    "strategies": {
+      "collection": "strategy",
+      "via": "farmer"
+    },
+    "poolAddress": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "strategies",
+  "info": {
+    "name": "Strategy",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "strategyImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "strategyAddress": {
+      "type": "string"
+    },
+    "apy": {
+      "type": "string"
+    },
+    "risk": {
+      "model": "risk",
+      "via": "strategies"
+    },
+    "token": {
+      "model": "tokens",
+      "via": "strategies"
+    },
+    "farmer": {
+      "via": "strategies",
+      "model": "farmers"
+    }
+  }
+}

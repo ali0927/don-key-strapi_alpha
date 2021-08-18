@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "risks",
+  "info": {
+    "name": "Risk"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "tokens": {
+      "collection": "tokens",
+      "via": "risks",
+      "dominant": true
+    },
+    "strategies": {
+      "via": "risk",
+      "collection": "strategy"
+    }
+  }
+}
