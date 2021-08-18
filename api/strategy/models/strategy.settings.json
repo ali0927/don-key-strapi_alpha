@@ -36,6 +36,18 @@
     "strategyAddress": {
       "type": "string"
     },
+    "swapInFees": {
+      "type": "string"
+    },
+    "swapOutFees": {
+      "type": "string"
+    },
+    "entranceFees": {
+      "type": "string"
+    },
+    "exitFees": {
+      "type": "string"
+    },
     "apy": {
       "type": "string"
     },
