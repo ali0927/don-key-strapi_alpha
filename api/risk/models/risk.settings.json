@@ -30,8 +30,8 @@
       "pluginOptions": {}
     },
     "tokens": {
-      "collection": "tokens",
       "via": "risks",
+      "collection": "tokens",
       "dominant": true
     },
     "strategies": {

@@ -56,8 +56,8 @@
       "via": "strategies"
     },
     "token": {
-      "model": "tokens",
-      "via": "strategies"
+      "via": "strategies",
+      "model": "tokens"
     },
     "farmer": {
       "via": "strategies",
