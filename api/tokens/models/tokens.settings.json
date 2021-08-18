@@ -17,6 +17,9 @@
     "symbol": {
       "type": "string"
     },
+    "tokenAddress": {
+      "type": "string"
+    },
     "image": {
       "collection": "file",
       "via": "related",
