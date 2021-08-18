@@ -51,7 +51,15 @@
     "strategies": {
       "collection": "strategy",
       "via": "farmer"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "disabled",
+        "active",
+        "hidden"
+      ],
+      "default": "hidden"
     }
- 
   }
 }
