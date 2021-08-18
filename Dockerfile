@@ -10,8 +10,6 @@ RUN yarn
 
 COPY . .
 
-RUN cd plugins/wysiwyg && yarn 
-
 ENV NODE_ENV=production
 
 RUN yarn build
