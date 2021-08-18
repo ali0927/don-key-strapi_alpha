@@ -12,6 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "guid": {
+      "type": "string"
+    },
     "name": {
       "type": "string"
     },
