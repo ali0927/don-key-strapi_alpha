@@ -17,6 +17,18 @@
     "description": {
       "type": "text"
     },
+    "farmerImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
     "active": {
       "type": "boolean"
     },
@@ -26,12 +38,12 @@
     "telegram": {
       "type": "string"
     },
+    "poolAddress": {
+      "type": "string"
+    },
     "strategies": {
       "collection": "strategy",
       "via": "farmer"
-    },
-    "poolAddress": {
-      "type": "string"
     }
   }
 }
