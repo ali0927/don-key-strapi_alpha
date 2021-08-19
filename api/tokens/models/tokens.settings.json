@@ -21,6 +21,15 @@
     "tokenAddress": {
       "type": "string"
     },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "disabled",
+        "active",
+        "hidden",
+        "commingsoon"
+      ]
+    },
     "image": {
       "model": "file",
       "via": "related",
