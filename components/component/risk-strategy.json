@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_component_risk_strategies",
+  "info": {
+    "name": "RiskStrategy",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "risk": {
+      "model": "risk"
+    },
+    "strategy": {
+      "model": "strategy"
+    }
+  }
+}

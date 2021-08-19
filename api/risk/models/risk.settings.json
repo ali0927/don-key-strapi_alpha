@@ -29,11 +29,6 @@
       "required": false,
       "pluginOptions": {}
     },
-    "tokens": {
-      "via": "risks",
-      "collection": "tokens",
-      "dominant": true
-    },
     "strategies": {
       "via": "risk",
       "collection": "strategy"

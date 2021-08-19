@@ -42,16 +42,17 @@
       "required": false,
       "pluginOptions": {}
     },
-    "risks": {
-      "via": "tokens",
-      "collection": "risk"
-    },
     "strategies": {
       "via": "token",
       "collection": "strategy"
     },
     "network": {
       "model": "networks"
+    },
+    "RiskStrategy": {
+      "type": "component",
+      "repeatable": true,
+      "component": "component.risk-strategy"
     }
   }
 }
