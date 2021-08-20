@@ -62,10 +62,6 @@
     "farmer": {
       "via": "strategies",
       "model": "farmers"
-    },
-    "network": {
-      "via": "strategies",
-      "model": "networks"
     }
   }
 }

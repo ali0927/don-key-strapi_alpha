@@ -60,6 +60,10 @@
         "hidden"
       ],
       "default": "hidden"
+    },
+    "network": {
+      "via": "farmers",
+      "model": "networks"
     }
   }
 }
