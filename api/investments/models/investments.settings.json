@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "investments",
+  "info": {
+    "name": "Investments"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "wallet_address": {
+      "type": "string"
+    },
+    "to_pooladdress": {
+      "type": "string"
+    }
+  }
+}
