@@ -6,9 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "risk": {
-      "model": "risk"
-    },
     "strategy": {
       "model": "strategy"
     }
