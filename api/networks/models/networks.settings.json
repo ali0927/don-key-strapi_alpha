@@ -22,8 +22,8 @@
       "type": "integer"
     },
     "farmers": {
-      "collection": "farmers",
-      "via": "network"
+      "via": "network",
+      "collection": "farmers"
     }
   }
 }

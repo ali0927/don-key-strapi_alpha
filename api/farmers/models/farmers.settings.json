@@ -13,7 +13,9 @@
   "pluginOptions": {},
   "attributes": {
     "guid": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "name": {
       "type": "string"
