@@ -24,6 +24,17 @@
     "farmers": {
       "via": "network",
       "collection": "farmers"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "normal",
+        "crosschain"
+      ],
+      "default": "normal"
+    },
+    "destination": {
+      "type": "string"
     }
   }
 }
