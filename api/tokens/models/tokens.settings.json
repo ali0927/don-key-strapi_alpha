@@ -30,6 +30,9 @@
         "commingsoon"
       ]
     },
+    "boostApy": {
+      "type": "boolean"
+    },
     "image": {
       "model": "file",
       "via": "related",

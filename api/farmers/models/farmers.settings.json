@@ -59,6 +59,7 @@
       "enum": [
         "disabled",
         "active",
+        "comingsoon",
         "hidden"
       ],
       "default": "hidden"
