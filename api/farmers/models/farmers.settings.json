@@ -67,6 +67,10 @@
     "network": {
       "via": "farmers",
       "model": "networks"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }

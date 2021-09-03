@@ -59,6 +59,10 @@
     },
     "maxApy": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }

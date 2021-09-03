@@ -21,6 +21,10 @@
     "active": {
       "type": "boolean"
     },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
     "strategyImage": {
       "model": "file",
       "via": "related",

@@ -35,6 +35,10 @@
     },
     "destination": {
       "type": "string"
+    }, 
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }
