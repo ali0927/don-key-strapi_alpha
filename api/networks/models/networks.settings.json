@@ -18,13 +18,6 @@
     "symbol": {
       "type": "string"
     },
-    "chainId": {
-      "type": "integer"
-    },
-    "farmers": {
-      "via": "network",
-      "collection": "farmers"
-    },
     "type": {
       "type": "enumeration",
       "enum": [
@@ -33,9 +26,35 @@
       ],
       "default": "normal"
     },
-    "destination": {
+    "chainId": {
+      "type": "integer"
+    },
+    "tokenSymbol": {
       "type": "string"
     },
+    "tokendecimals": {
+      "type": "integer"
+    },
+    "networkNameForMetamask": {
+      "type": "string"
+    },
+    "blockExplorerUrl": {
+      "type": "string"
+    },
+    "rpcUrl": {
+      "type": "string"
+    },
+    "farmers": {
+      "via": "network",
+      "collection": "farmers"
+    },
+    "destination": {
+      "type": "string"
+    },    
+    "destinationSymbol": {
+      "type": "string"
+    },
+   
     "slug": {
       "type": "uid",
       "targetField": "name",
