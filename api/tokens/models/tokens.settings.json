@@ -18,6 +18,12 @@
     "symbol": {
       "type": "string"
     },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
     "tokenAddress": {
       "type": "string"
     },
