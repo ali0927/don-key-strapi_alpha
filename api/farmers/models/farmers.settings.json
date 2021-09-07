@@ -20,6 +20,9 @@
     "name": {
       "type": "string"
     },
+    "withdrawTimeFrame": {
+      "type": "integer"
+    },
     "description": {
       "type": "text"
     },
