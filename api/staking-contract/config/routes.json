@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/staking-contract",
+      "handler": "staking-contract.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/staking-contract",
+      "handler": "staking-contract.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/staking-contract",
+      "handler": "staking-contract.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "staking_contracts",
+  "info": {
+    "name": "Staking Contract"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "address": {
+      "type": "string"
+    }
+  }
+}
