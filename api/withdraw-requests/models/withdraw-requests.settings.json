@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "withdraw_requests",
+  "info": {
+    "name": "WithdrawRequests"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "poolAddress": {
+      "type": "string"
+    },
+    "walletAddress": {
+      "type": "string"
+    },
+    "investedAmountinUSD": {
+      "type": "string"
+    },
+    "investedAmount": {
+      "type": "string"
+    },
+    "profit": {
+      "type": "string"
+    },
+    "currentHoldings": {
+      "type": "string"
+    },
+    "lpTokens": {
+      "type": "string"
+    }
+  }
+}

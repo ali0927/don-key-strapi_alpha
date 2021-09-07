@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/withdraw-requests",
+      "handler": "withdraw-requests.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/withdraw-requests/count",
+      "handler": "withdraw-requests.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/withdraw-requests/:id",
+      "handler": "withdraw-requests.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/withdraw-requests",
+      "handler": "withdraw-requests.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/withdraw-requests/:id",
+      "handler": "withdraw-requests.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/withdraw-requests/:id",
+      "handler": "withdraw-requests.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
