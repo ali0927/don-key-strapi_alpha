@@ -18,6 +18,9 @@
     "description": {
       "type": "text"
     },
+    "info": {
+      "type": "text"
+    },
     "active": {
       "type": "boolean"
     },
