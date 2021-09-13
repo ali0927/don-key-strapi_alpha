@@ -50,11 +50,10 @@
     },
     "destination": {
       "type": "string"
-    },    
+    },
     "destinationSymbol": {
       "type": "string"
     },
-   
     "slug": {
       "type": "uid",
       "targetField": "name",
