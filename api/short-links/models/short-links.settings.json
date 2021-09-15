@@ -27,7 +27,7 @@
       "type": "string"
     },
     "referral_image": {
-      "via": "short_link",
+      "via": "short_links",
       "model": "referral-images"
     }
   }

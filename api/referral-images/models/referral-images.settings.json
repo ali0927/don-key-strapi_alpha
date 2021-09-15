@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "referral_images",
   "info": {
-    "name": "Referral Images"
+    "name": "Referral Images",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -23,8 +24,8 @@
       "required": false,
       "pluginOptions": {}
     },
-    "short_link": {
-      "model": "short-links",
+    "short_links": {
+      "collection": "short-links",
       "via": "referral_image"
     }
   }
