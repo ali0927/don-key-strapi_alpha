@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "referral_images",
+  "info": {
+    "name": "Referral Images"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "short_link": {
+      "model": "short-links",
+      "via": "referral_image"
+    }
+  }
+}

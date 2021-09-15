@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "short_links",
+  "info": {
+    "name": "ShortLinks"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "shortcode": {
+      "type": "string"
+    },
+    "referralcode": {
+      "type": "string"
+    },
+    "walletAddress": {
+      "type": "string"
+    },
+    "poolAddress": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "referral_image": {
+      "via": "short_link",
+      "model": "referral-images"
+    }
+  }
+}
