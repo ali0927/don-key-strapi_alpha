@@ -41,9 +41,6 @@
       "required": true,
       "pluginOptions": {}
     },
-    "strategyAddress": {
-      "type": "string"
-    },
     "swapInFees": {
       "type": "string"
     },
@@ -70,6 +67,11 @@
     "farmer": {
       "via": "strategies",
       "model": "farmers"
+    },
+    "Pools": {
+      "type": "component",
+      "repeatable": true,
+      "component": "component.pools"
     }
   }
 }

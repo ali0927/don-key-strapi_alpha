@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_component_pools",
+  "info": {
+    "name": "Pools",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "poolAddress": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "inactive",
+        "deprecated",
+        "closed",
+        "paused"
+      ]
+    },
+    "created_on": {
+      "type": "date"
+    }
+  }
+}

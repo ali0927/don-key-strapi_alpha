@@ -51,8 +51,8 @@
       "type": "integer"
     },
     "strategies": {
-      "collection": "strategy",
-      "via": "farmer"
+      "via": "farmer",
+      "collection": "strategy"
     },
     "status": {
       "type": "enumeration",
