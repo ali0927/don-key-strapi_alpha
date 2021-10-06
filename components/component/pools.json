@@ -2,7 +2,8 @@
   "collectionName": "components_component_pools",
   "info": {
     "name": "Pools",
-    "icon": "archive"
+    "icon": "archive",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -21,9 +22,6 @@
         "closed",
         "paused"
       ]
-    },
-    "created_on": {
-      "type": "date"
     }
   }
 }

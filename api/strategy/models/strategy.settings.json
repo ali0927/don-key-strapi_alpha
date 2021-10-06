@@ -72,6 +72,9 @@
       "type": "component",
       "repeatable": true,
       "component": "component.pools"
+    },
+    "created_on": {
+      "type": "date"
     }
   }
 }
