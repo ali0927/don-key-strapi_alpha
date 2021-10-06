@@ -58,11 +58,6 @@
     "network": {
       "model": "networks"
     },
-    "RiskStrategy": {
-      "type": "component",
-      "repeatable": true,
-      "component": "component.risk-strategy"
-    },
     "maxApy": {
       "type": "string"
     },
