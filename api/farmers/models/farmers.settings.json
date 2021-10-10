@@ -50,6 +50,12 @@
     "poolVersion": {
       "type": "integer"
     },
+    "oldPoolAddress": {
+      "type": "string"
+    },
+    "oldPoolVersion": {
+      "type": "integer"
+    },
     "strategies": {
       "via": "farmer",
       "collection": "strategy"
