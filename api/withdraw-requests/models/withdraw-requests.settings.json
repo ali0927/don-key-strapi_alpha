@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "withdraw_requests",
   "info": {
-    "name": "WithdrawRequests"
+    "name": "WithdrawRequests",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -17,19 +18,13 @@
     "walletAddress": {
       "type": "string"
     },
-    "investedAmountinUSD": {
-      "type": "string"
-    },
-    "investedAmount": {
-      "type": "string"
-    },
     "profit": {
       "type": "string"
     },
-    "currentHoldings": {
+    "lpTokens": {
       "type": "string"
     },
-    "lpTokens": {
+    "amountInToken": {
       "type": "string"
     }
   }
