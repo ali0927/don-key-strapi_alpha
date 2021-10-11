@@ -88,9 +88,6 @@
     },
     "last_cycle": {
       "type": "datetime"
-    },
-    "upgraded_pool": {
-      "type": "string"
     }
   }
 }
