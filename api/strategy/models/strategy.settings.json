@@ -21,9 +21,6 @@
     "info": {
       "type": "text"
     },
-    "active": {
-      "type": "boolean"
-    },
     "slug": {
       "type": "uid",
       "targetField": "name",
@@ -67,11 +64,6 @@
     "farmer": {
       "via": "strategies",
       "model": "farmers"
-    },
-    "Pools": {
-      "type": "component",
-      "repeatable": true,
-      "component": "component.pools"
     },
     "created_on": {
       "type": "date"
