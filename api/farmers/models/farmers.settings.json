@@ -88,6 +88,9 @@
     },
     "last_cycle": {
       "type": "datetime"
+    },
+    "graphUrl": {
+      "type": "string"
     }
   }
 }
