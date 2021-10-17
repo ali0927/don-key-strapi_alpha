@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_component_address_lists",
+  "info": {
+    "name": "AddressList",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "string"
+    }
+  }
+}

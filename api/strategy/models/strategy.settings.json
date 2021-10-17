@@ -26,6 +26,9 @@
       "targetField": "name",
       "required": true
     },
+    "poolAddress": {
+      "type": "string"
+    },
     "strategyImage": {
       "model": "file",
       "via": "related",
@@ -67,6 +70,11 @@
     },
     "created_on": {
       "type": "date"
+    },
+    "blacklist": {
+      "type": "component",
+      "repeatable": true,
+      "component": "component.address-list"
     }
   }
 }
