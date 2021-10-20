@@ -39,6 +39,9 @@
     "boostApy": {
       "type": "boolean"
     },
+    "isWrapped": {
+      "type": "boolean"
+    },
     "image": {
       "model": "file",
       "via": "related",
