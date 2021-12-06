@@ -26,6 +26,9 @@
     "description": {
       "type": "text"
     },
+    "hasInsurance": {
+      "type": "boolean"
+    },
     "farmerImage": {
       "model": "file",
       "via": "related",
