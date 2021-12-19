@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bug_reports",
+  "info": {
+    "name": "BugReports",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "inprogress",
+        "notstarted",
+        "complete"
+      ]
+    },
+    "progress": {
+      "type": "integer"
+    }
+  }
+}
