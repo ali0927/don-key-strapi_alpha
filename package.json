@@ -13,6 +13,7 @@
   "dependencies": {
     "knex": "0.21.18",
     "mysql": "2.18.1",
+    "nodemailer": "^6.7.2",
     "strapi": "3.6.6",
     "strapi-admin": "3.6.6",
     "strapi-connector-bookshelf": "3.6.6",
