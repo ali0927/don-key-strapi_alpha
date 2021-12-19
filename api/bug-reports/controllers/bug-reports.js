@@ -20,13 +20,11 @@ const from = 'donkey.test.email@gmail.com';
 
 module.exports = {
     async create(ctx){
-
-        if(ctx.request.body.status !== "unverified"){
-            ctx.request.body.status = "unverified";
+      const body= ctx.request.body
+        if(body.status !== "unverified"){
+            body.status = "unverified";
         }
-        const body= ctx.request.body
         const reports = await strapi.services["bug-reports"].create(body);
-
         const options = {
             from ,
             to: "adarsh.singh.legha@gmail.com",
