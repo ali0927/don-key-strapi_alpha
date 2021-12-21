@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_component_locations",
+  "info": {
+    "name": "Location",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "page": {
+      "type": "string"
+    }
+  }
+}

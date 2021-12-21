@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_component_text_fields",
+  "info": {
+    "name": "TextField",
+    "icon": "calendar-times",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {}
+}

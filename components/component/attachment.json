@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_component_attachments",
+  "info": {
+    "name": "Attachment",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "Attachment": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

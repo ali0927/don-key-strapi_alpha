@@ -12,14 +12,31 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "page": {
-      "type": "string"
-    },
-    "title": {
+    "name": {
       "type": "string"
     },
     "description": {
       "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "moneyrelated",
+        "technical"
+      ],
+      "default": "technical"
+    },
+    "telegram": {
+      "type": "string"
+    },
+    "urgency": {
+      "type": "enumeration",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "default": "low"
     },
     "status": {
       "type": "enumeration",
@@ -28,7 +45,8 @@
         "notstarted",
         "complete",
         "unverified"
-      ]
+      ],
+      "default": "unverified"
     },
     "progress": {
       "type": "integer"
@@ -36,7 +54,10 @@
     "Extras": {
       "type": "dynamiczone",
       "components": [
-        "component.info"
+        "component.info",
+        "component.attachment",
+        "component.wallet-details",
+        "component.location"
       ]
     }
   }

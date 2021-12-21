@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_component_wallet_details",
+  "info": {
+    "name": "WalletDetails",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "walletAddress": {
+      "type": "string"
+    }
+  }
+}
