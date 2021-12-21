@@ -46,8 +46,9 @@ module.exports = {
       ...override_params,
     });
 
-    return reports.map((entity) =>
-      sanitizeEntity(entity, { model: strapi.models["bug-reports"] })
-    );
+    return reports.map((entity) => {
+      const { Extras, ...rest } = entity;
+      return sanitizeEntity(rest, { model: strapi.models["bug-reports"] });
+    });
   },
 };

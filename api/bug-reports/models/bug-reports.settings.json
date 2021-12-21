@@ -13,10 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "email": {
-      "type": "email"
+      "type": "email",
+      "private": true
+    },
+    "title": {
+      "type": "string"
     },
     "message": {
       "type": "text"
@@ -27,10 +32,12 @@
         "moneyrelated",
         "technical"
       ],
-      "default": "technical"
+      "default": "technical",
+      "private": true
     },
     "telegram": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "urgency": {
       "type": "enumeration",
@@ -39,7 +46,8 @@
         "medium",
         "low"
       ],
-      "default": "low"
+      "default": "low",
+      "private": true
     },
     "status": {
       "type": "enumeration",
@@ -62,6 +70,5 @@
         "component.location"
       ]
     }
-  
   }
 }
