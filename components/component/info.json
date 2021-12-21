@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_component_infos",
+  "info": {
+    "name": "Info",
+    "icon": "anchor"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

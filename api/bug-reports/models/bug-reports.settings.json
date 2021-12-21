@@ -32,6 +32,12 @@
     },
     "progress": {
       "type": "integer"
+    },
+    "Extras": {
+      "type": "dynamiczone",
+      "components": [
+        "component.info"
+      ]
     }
   }
 }
