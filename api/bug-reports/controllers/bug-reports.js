@@ -23,15 +23,18 @@ module.exports = {
     if (body.status !== "unverified") {
       body.status = "unverified";
     }
+    const to = process.env.SUPPORT_NOTIFY_EMAIL;
     const reports = await strapi.services["bug-reports"].create(body);
-    const options = {
-      from,
-      to: process.env.SUPPORT_NOTIFY_EMAIL,
-      subject: "Bug Report",
-      text: body.description,
-    };
+    if (to) {
+      const options = {
+        from,
+        to,
+        subject: "Bug Report",
+        text: body.description,
+      };
 
-    await transporter.sendMail(options);
+      await transporter.sendMail(options);
+    }
 
     return reports;
   },

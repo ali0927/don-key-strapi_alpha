@@ -15,6 +15,9 @@
     "name": {
       "type": "string"
     },
+    "email": {
+      "type": "email"
+    },
     "description": {
       "type": "text"
     },
@@ -54,11 +57,11 @@
     "Extras": {
       "type": "dynamiczone",
       "components": [
-        "component.info",
         "component.attachment",
         "component.wallet-details",
         "component.location"
       ]
     }
+  
   }
 }
