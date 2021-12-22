@@ -42,7 +42,7 @@ module.exports = {
       const coda = new Coda(CODA_KEY);
       const table = await coda.getTable("ZeMJi5CK3W", "grid-CRRZiOJzCn");
 
-      const extras = body.extras || [];
+      const extras = body.Extras || [];
 
       await table.insertRows([
         {
