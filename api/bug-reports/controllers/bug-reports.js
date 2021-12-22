@@ -38,32 +38,33 @@ module.exports = {
     const to = process.env.SUPPORT_NOTIFY_EMAIL;
     const reports = await strapi.services["bug-reports"].create(body);
     const CODA_KEY = process.env.CODA_API_KEY;
+    const Result =  {
+      Task: body.title,
+      Description: body.message,
+      Attachments: findComponentValue(
+        reports.Extras || [],
+        "component.attachment",
+        "Attachment.url"
+      ),
+      "Report Type": body.type,
+      Urgency: body.urgency,
+      "Reporter Name": body.name,
+      "Reporter Wallet": findComponentValue(
+        extras,
+        "component.wallet-details",
+        "walletAddress"
+      ),
+      "Reporter Telegram Nickname": body.telegram,
+      "Reporter Email": body.email,
+    },
     if (CODA_KEY) {
       const coda = new Coda(CODA_KEY);
       const table = await coda.getTable("ZeMJi5CK3W", "grid-CRRZiOJzCn");
 
       const extras = body.Extras || [];
-
+      
       await table.insertRows([
-        {
-          Task: body.title,
-          Description: body.message,
-          Attachments: findComponentValue(
-            reports.Extras || [],
-            "component.attachment",
-            "Attachment.url"
-          ),
-          "Report Type": body.type,
-          Urgency: body.urgency,
-          "Reporter Name": body.name,
-          "Reporter Wallet": findComponentValue(
-            extras,
-            "component.wallet-details",
-            "walletAddress"
-          ),
-          "Reporter Telegram Nickname": body.telegram,
-          "Reporter Email": body.email,
-        },
+       Result
       ]);
     }
 
@@ -72,7 +73,7 @@ module.exports = {
         from,
         to,
         subject: "Bug Report",
-        text: body.description,
+        text: JSON.stringify(Result),
       };
 
       await transporter.sendMail(options);
