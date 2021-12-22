@@ -1,5 +1,6 @@
 "use strict";
 const { sanitizeEntity } = require("strapi-utils");
+const { Coda } = require("coda-js");
 
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
@@ -17,6 +18,18 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+
+const findComponentValue = (extras, component, key) => {
+  if(extras.length === 0){
+    return "Nill";
+  }
+  const extra = extras.find(item => item.__component === component);
+  if(!extra){
+    return "Nill";
+  }
+  return extra[key];
+}
+
 module.exports = {
   async create(ctx) {
     const body = ctx.request.body;
@@ -25,6 +38,28 @@ module.exports = {
     }
     const to = process.env.SUPPORT_NOTIFY_EMAIL;
     const reports = await strapi.services["bug-reports"].create(body);
+    const CODA_KEY = process.env.CODA_API_KEY;
+    if (CODA_KEY) {
+      const coda = new Coda(CODA_KEY);
+      const table = await (coda.getTable( 'ZeMJi5CK3W', 'grid-CRRZiOJzCn'));
+      
+      const extras = body.extras || [];
+      await table.insertRows([
+        {
+          Task: body.title,
+          Description: body.message,
+          // Attachments: findComponentValue(),
+          'Report Type': body.type,
+          Urgency:  body.urgency,
+          'Reporter Name': body.name,
+          'Reporter Wallet': findComponentValue(extras, "component.wallet-details", "walletAddress"),
+          'Reporter Telegram Nickname': body.telegram,
+          'Reporter Email': body.email
+        },
+      ]);
+ 
+    }
+
     if (to) {
       const options = {
         from,
@@ -45,7 +80,7 @@ module.exports = {
       ...(ctx.query || {}),
       ...override_params,
     });
-
+ 
     return reports.map((entity) => {
       const { Extras, ...rest } = entity;
       return sanitizeEntity(rest, { model: strapi.models["bug-reports"] });
