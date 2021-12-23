@@ -38,7 +38,8 @@ module.exports = {
     const to = process.env.SUPPORT_NOTIFY_EMAIL;
     const reports = await strapi.services["bug-reports"].create(body);
     const CODA_KEY = process.env.CODA_API_KEY;
-    const Result =  {
+    const Result = {
+      Goal: 'Make app more Stable',
       Task: body.title,
       Description: body.message,
       Attachments: findComponentValue(
@@ -54,18 +55,17 @@ module.exports = {
         "component.wallet-details",
         "walletAddress"
       ),
+      "Report Date": new Date().toString(),
       "Reporter Telegram Nickname": body.telegram,
       "Reporter Email": body.email,
-    },
+    };
     if (CODA_KEY) {
       const coda = new Coda(CODA_KEY);
       const table = await coda.getTable("ZeMJi5CK3W", "grid-CRRZiOJzCn");
 
       const extras = body.Extras || [];
-      
-      await table.insertRows([
-       Result
-      ]);
+
+      await table.insertRows([Result]);
     }
 
     if (to) {
