@@ -51,7 +51,7 @@ module.exports = {
       Urgency: body.urgency,
       "Reporter Name": body.name,
       "Reporter Wallet": findComponentValue(
-        extras,
+        reports.Extras || [],
         "component.wallet-details",
         "walletAddress"
       ),
@@ -63,7 +63,7 @@ module.exports = {
       const coda = new Coda(CODA_KEY);
       const table = await coda.getTable("ZeMJi5CK3W", "grid-CRRZiOJzCn");
 
-      const extras = body.Extras || [];
+  
 
       await table.insertRows([Result]);
     }
