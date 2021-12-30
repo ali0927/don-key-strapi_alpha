@@ -29,7 +29,7 @@
     "type": {
       "type": "enumeration",
       "enum": [
-        "moneyrelated",
+        "investrelated",
         "technical"
       ],
       "default": "technical",
@@ -69,6 +69,11 @@
         "component.wallet-details",
         "component.location"
       ]
+    },
+    "ticketid": {
+      "type": "biginteger",
+      "min": "100000",
+      "private": true
     }
   }
 }

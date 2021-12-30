@@ -35,8 +35,9 @@ module.exports = {
     if (body.status !== "unverified") {
       body.status = "unverified";
     }
+    const ticketid = Math.floor(100000 + Math.random() * 900000);
     const to = process.env.SUPPORT_NOTIFY_EMAIL;
-    const reports = await strapi.services["bug-reports"].create(body);
+    const reports = await strapi.services["bug-reports"].create({...body, ticketid});
     const CODA_KEY = process.env.CODA_API_KEY;
     const Result = {
       Goal: 'Make app more Stable',
@@ -58,15 +59,18 @@ module.exports = {
       "Report Date": new Date().toString(),
       "Reporter Telegram Nickname": body.telegram,
       "Reporter Email": body.email,
+      "Ticket ID": ticketid
     };
-    if (CODA_KEY) {
-      const coda = new Coda(CODA_KEY);
-      const table = await coda.getTable("ZeMJi5CK3W", "grid-CRRZiOJzCn");
-
-  
-
-      await table.insertRows([Result]);
+    try {
+      if (CODA_KEY) {
+        const coda = new Coda(CODA_KEY);
+        const table = await coda.getTable("ZeMJi5CK3W", "grid-CRRZiOJzCn");
+        await table.insertRows([Result]);
+      }
+    } catch(e){
+      console.error(e);
     }
+  
 
     if (to) {
       const options = {
@@ -79,7 +83,7 @@ module.exports = {
       await transporter.sendMail(options);
     }
 
-    return reports;
+    return {...reports, ticketid};
   },
   async find(ctx) {
     const override_params = { status_nin: ["unverified"] };
