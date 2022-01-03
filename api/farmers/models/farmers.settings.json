@@ -94,6 +94,14 @@
     },
     "graphUrl": {
       "type": "string"
+    },
+    "Insurance": {
+      "type": "component",
+      "repeatable": true,
+      "component": "component.insurance"
+    },
+    "minAmountForInsurance": {
+      "type": "float"
     }
   }
 }

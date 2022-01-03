@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_component_insurances",
+  "info": {
+    "name": "Insurance",
+    "icon": "american-sign-language-interpreting"
+  },
+  "options": {},
+  "attributes": {
+    "productId": {
+      "type": "string"
+    },
+    "percent": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
