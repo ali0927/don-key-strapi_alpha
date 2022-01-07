@@ -2,18 +2,16 @@
   "collectionName": "components_component_insurances",
   "info": {
     "name": "Insurance",
-    "icon": "american-sign-language-interpreting"
+    "icon": "american-sign-language-interpreting",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "productId": {
-      "type": "string"
-    },
     "percent": {
       "type": "string"
     },
-    "name": {
-      "type": "string"
+    "protocol": {
+      "model": "protocols"
     }
   }
 }
