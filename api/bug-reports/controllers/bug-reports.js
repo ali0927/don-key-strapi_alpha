@@ -26,7 +26,7 @@ const findComponentValue = (extras, component, key) => {
   if (!extra) {
     return "Nill";
   }
-  return _.get(extra, key);
+  return _.get(extra, key) || '';
 };
 
 module.exports = {
@@ -58,7 +58,6 @@ module.exports = {
       ),
       "Report Date": new Date().toString(),
       "Reporter Telegram Nickname": body.telegram,
-      "Reporter Email": body.email,
       "Ticket ID": ticketid
     };
     try {
