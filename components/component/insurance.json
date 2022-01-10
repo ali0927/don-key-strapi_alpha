@@ -12,6 +12,9 @@
     },
     "protocol": {
       "model": "protocols"
+    },
+    "token": {
+      "model": "tokens"
     }
   }
 }
