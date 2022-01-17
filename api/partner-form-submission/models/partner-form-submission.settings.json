@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partner_form_submissions",
+  "info": {
+    "name": "PartnerFormSubmission"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "telegram": {
+      "type": "string"
+    },
+    "space": {
+      "type": "string"
+    }
+  }
+}
