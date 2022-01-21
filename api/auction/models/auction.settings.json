@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "auctions",
+  "info": {
+    "name": "auction"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "text"
+    },
+    "auctionAddress": {
+      "type": "string"
+    }
+  }
+}
