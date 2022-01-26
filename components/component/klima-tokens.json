@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_component_klima_tokens",
+  "info": {
+    "name": "KlimaTokens",
+    "icon": "angle-double-right"
+  },
+  "options": {},
+  "attributes": {
+    "klima": {
+      "type": "string"
+    }
+  }
+}

@@ -105,6 +105,12 @@
     },
     "minAmountForInsurance": {
       "type": "float"
+    },
+    "Zone": {
+      "type": "dynamiczone",
+      "components": [
+        "component.klima-tokens"
+      ]
     }
   }
 }
