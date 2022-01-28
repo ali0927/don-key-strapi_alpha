@@ -32,6 +32,10 @@
     "strategies": {
       "via": "risk",
       "collection": "strategy"
+    },
+    "suggestions": {
+      "via": "risk",
+      "collection": "suggestion"
     }
   }
 }
