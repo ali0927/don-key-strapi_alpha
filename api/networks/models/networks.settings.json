@@ -62,6 +62,10 @@
     "protocols": {
       "via": "network",
       "collection": "protocols"
+    },
+    "suggestions": {
+      "via": "network",
+      "collection": "suggestion"
     }
   }
 }
