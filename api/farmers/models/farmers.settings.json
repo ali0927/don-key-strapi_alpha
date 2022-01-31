@@ -111,6 +111,10 @@
       "components": [
         "component.klima-tokens"
       ]
+    },
+    "permanentLoss": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
