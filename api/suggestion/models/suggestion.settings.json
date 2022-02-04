@@ -27,18 +27,11 @@
     "telegram": {
       "type": "string"
     },
-    "address": {
-      "type": "string",
-      "required": true
-    },
     "apy": {
       "type": "decimal"
     },
     "riskword": {
       "type": "string"
-    },
-    "votes": {
-      "type": "json"
     },
     "risk": {
       "model": "risk",
@@ -54,14 +47,21 @@
         "new",
         "approved",
         "old"
-      ]
-    },
-    "date": {
-      "type": "datetime"
+      ],
+      "default": "new"
     },
     "comments": {
       "via": "suggestion",
       "collection": "comment"
+    },
+    "customer": {
+      "via": "suggestions",
+      "model": "customer"
+    },
+    "votes": {
+      "via": "voteSuggestions",
+      "collection": "customer",
+      "dominant": true
     }
   }
 }

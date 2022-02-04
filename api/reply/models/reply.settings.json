@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "replies",
   "info": {
-    "name": "reply"
+    "name": "reply",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -11,20 +12,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "address": {
-      "type": "string",
-      "required": true
-    },
     "content": {
       "type": "text",
       "required": true
     },
-    "date": {
-      "type": "datetime"
-    },
     "comment": {
       "via": "replies",
       "model": "comment"
+    },
+    "customer": {
+      "via": "replies",
+      "model": "customer"
     }
   }
 }

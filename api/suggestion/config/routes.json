@@ -29,7 +29,7 @@
       "path": "/suggestions",
       "handler": "suggestion.create",
       "config": {
-        "policies": []
+        "policies": ["global::is-authenticated"]
       }
     },
     {
@@ -37,7 +37,15 @@
       "path": "/suggestions/:id",
       "handler": "suggestion.update",
       "config": {
-        "policies": []
+        "policies": ["global::is-authenticated"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/suggestions/vote/:id",
+      "handler": "suggestion.vote",
+      "config": {
+        "policies": ["global::is-authenticated"]
       }
     },
     {
@@ -45,7 +53,7 @@
       "path": "/suggestions/:id",
       "handler": "suggestion.delete",
       "config": {
-        "policies": []
+        "policies": ["global::is-authenticated"]
       }
     }
   ]

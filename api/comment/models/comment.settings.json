@@ -12,27 +12,26 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "address": {
-      "type": "string",
-      "required": true
-    },
     "content": {
       "type": "text",
       "required": true
-    },
-    "likes": {
-      "type": "json"
-    },
-    "date": {
-      "type": "datetime"
     },
     "suggestion": {
       "via": "comments",
       "model": "suggestion"
     },
     "replies": {
-      "collection": "reply",
-      "via": "comment"
+      "via": "comment",
+      "collection": "reply"
+    },
+    "customer": {
+      "via": "comments",
+      "model": "customer"
+    },
+    "likes": {
+      "via": "likeComments",
+      "collection": "customer",
+      "dominant": true
     }
   }
 }

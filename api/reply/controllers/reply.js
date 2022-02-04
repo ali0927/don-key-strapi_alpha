@@ -5,4 +5,18 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  async create(ctx) {
+    const body = ctx.request.body;
+    try {
+      const reply = await strapi.services["reply"].create({
+        ...body, 
+        customer: ctx.request.user.id
+      });
+      return reply;
+    } catch(e){
+      console.error(e);
+      return { status: 'error' }
+    }
+  }, 
+};

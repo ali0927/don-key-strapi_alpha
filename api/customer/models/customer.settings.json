@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "Customer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "suggestions": {
+      "via": "customer",
+      "collection": "suggestion"
+    },
+    "comments": {
+      "via": "customer",
+      "collection": "comment"
+    },
+    "voteSuggestions": {
+      "via": "votes",
+      "collection": "suggestion"
+    },
+    "likeComments": {
+      "via": "likes",
+      "collection": "comment"
+    },
+    "replies": {
+      "via": "customer",
+      "collection": "reply"
+    }
+  }
+}
