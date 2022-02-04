@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "suggestions",
+  "info": {
+    "name": "suggestion",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "nickName": {
+      "type": "string",
+      "required": true
+    },
+    "telegram": {
+      "type": "string"
+    },
+    "apy": {
+      "type": "decimal"
+    },
+    "riskword": {
+      "type": "string"
+    },
+    "risk": {
+      "model": "risk",
+      "via": "suggestions"
+    },
+    "network": {
+      "model": "networks",
+      "via": "suggestions"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "approved",
+        "old"
+      ],
+      "default": "new"
+    },
+    "comments": {
+      "via": "suggestion",
+      "collection": "comment"
+    },
+    "customer": {
+      "via": "suggestions",
+      "model": "customer"
+    },
+    "votes": {
+      "via": "voteSuggestions",
+      "collection": "customer",
+      "dominant": true
+    }
+  }
+}

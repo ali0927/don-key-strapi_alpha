@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "replies",
+  "info": {
+    "name": "reply",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "comment": {
+      "via": "replies",
+      "model": "comment"
+    },
+    "customer": {
+      "via": "replies",
+      "model": "customer"
+    }
+  }
+}

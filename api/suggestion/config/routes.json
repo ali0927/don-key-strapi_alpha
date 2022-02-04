@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/suggestions",
+      "handler": "suggestion.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/suggestions/count",
+      "handler": "suggestion.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/suggestions/:id",
+      "handler": "suggestion.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/suggestions",
+      "handler": "suggestion.create",
+      "config": {
+        "policies": ["global::is-authenticated"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/suggestions/:id",
+      "handler": "suggestion.update",
+      "config": {
+        "policies": ["global::is-authenticated"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/suggestions/vote/:id",
+      "handler": "suggestion.vote",
+      "config": {
+        "policies": ["global::is-authenticated"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/suggestions/:id",
+      "handler": "suggestion.delete",
+      "config": {
+        "policies": ["global::is-authenticated"]
+      }
+    }
+  ]
+}
