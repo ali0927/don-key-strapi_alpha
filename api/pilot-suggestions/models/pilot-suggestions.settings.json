@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pilot_suggestions",
+  "info": {
+    "name": "Pilot Suggestions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "remarks": {
+      "type": "text"
+    }
+  }
+}
