@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pilot-suggestions",
+      "handler": "pilot-suggestions.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pilot-suggestions/count",
+      "handler": "pilot-suggestions.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pilot-suggestions/:id",
+      "handler": "pilot-suggestions.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pilot-suggestions",
+      "handler": "pilot-suggestions.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pilot-suggestions/:id",
+      "handler": "pilot-suggestions.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pilot-suggestions/:id",
+      "handler": "pilot-suggestions.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
