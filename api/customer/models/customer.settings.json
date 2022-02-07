@@ -16,6 +16,10 @@
       "type": "string",
       "required": true
     },
+    "nonce": {
+      "type": "biginteger",
+      "required": false
+    },
     "suggestions": {
       "via": "customer",
       "collection": "suggestion"

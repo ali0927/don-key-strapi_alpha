@@ -5,7 +5,7 @@
       "path": "/customers",
       "handler": "customer.find",
       "config": {
-        "policies": ["global::is-authenticated"]
+        "policies": []
       }
     },
     {
@@ -28,6 +28,14 @@
       "method": "POST",
       "path": "/customers",
       "handler": "customer.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/customers/nonce/:address",
+      "handler": "customer.getNonce",
       "config": {
         "policies": []
       }
