@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_component_auction_addresses",
+  "info": {
+    "name": "AuctionAddress",
+    "icon": "arrow-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "auctionAddress": {
+      "type": "string"
+    },
+    "auctionTable": {
+      "type": "string"
+    }
+  }
+}

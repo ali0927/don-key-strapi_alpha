@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "auctions",
   "info": {
-    "name": "auction"
+    "name": "auction",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -21,8 +22,10 @@
     "description": {
       "type": "text"
     },
-    "auctionAddress": {
-      "type": "string"
+    "AuctionAddress": {
+      "type": "component",
+      "repeatable": true,
+      "component": "component.auction-address"
     }
   }
 }
