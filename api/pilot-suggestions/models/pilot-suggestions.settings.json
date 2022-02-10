@@ -14,8 +14,8 @@
     "name": {
       "type": "string"
     },
-    "email": {
-      "type": "email"
+    "telegram": {
+      "type": "string"
     },
     "remarks": {
       "type": "text"
