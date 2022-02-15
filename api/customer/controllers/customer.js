@@ -20,12 +20,20 @@ module.exports = {
     }
     else customer = customers[0];
 
-    var hash = Web3.utils.sha3(customer.nonce.toString());
     const sig = body.signature;
-    const {v, r, s} = utils.fromRpcSig(sig);
-    const pubKey = utils.ecrecover(utils.toBuffer(hash), v, r, s);
-    const addrBuf = utils.pubToAddress(pubKey);
-    const decodedAddress = utils.bufferToHex(addrBuf);
+    const msg = `I am signing my one-time nonce: ${146798}`;
+    const msgBuffer = Buffer.from(msg);
+    const msgHash = utils.hashPersonalMessage(msgBuffer);
+    const signatureBuffer = utils.toBuffer(sig);
+    const signatureParams = utils.fromRpcSig(signatureBuffer);
+    const publicKey = utils.ecrecover(
+      msgHash,
+      signatureParams.v,
+      signatureParams.r,
+      signatureParams.s
+    );
+    const addressBuffer = utils.publicToAddress(publicKey);
+    const decodedAddress = utils.bufferToHex(addressBuffer);
 
     if (customer.address.toLowerCase() === decodedAddress.toLowerCase()) {
       const id = customer.id;
