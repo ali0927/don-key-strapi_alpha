@@ -21,7 +21,7 @@ module.exports = {
     else customer = customers[0];
 
     const sig = body.signature;
-    const msg = `I am signing my one-time nonce: ${146798}`;
+    const msg = `I am signing my one-time nonce: ${customer.nonce}`;
     const msgBuffer = Buffer.from(msg);
     const msgHash = utils.hashPersonalMessage(msgBuffer);
     const signatureBuffer = utils.toBuffer(sig);
