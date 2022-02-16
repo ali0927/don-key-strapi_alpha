@@ -10,9 +10,9 @@ const utils = require("ethereumjs-util");
 
 module.exports = {
   async signIn(ctx) {
-    const body = ctx.request.body;
+    const {address, signature} = ctx.request.body;
     const customers = await strapi.services["customer"].find({
-      address: body.address,
+      address,
     });
     let customer;
 
@@ -26,11 +26,11 @@ module.exports = {
       };
     }
 
-    const sig = body.signature;
+
     const msg = `I am signing my one-time nonce: ${customer.nonce}`;
     const msgBuffer = Buffer.from(msg);
     const msgHash = utils.hashPersonalMessage(msgBuffer);
-    const signatureBuffer = utils.toBuffer(sig);
+    const signatureBuffer = utils.toBuffer(signature);
     const signatureParams = utils.fromRpcSig(signatureBuffer);
     const publicKey = utils.ecrecover(
       msgHash,
@@ -50,7 +50,8 @@ module.exports = {
           expiresIn: "4d",
         }
       );
-      const _res = await strapi.services["customer"].update(
+      // remove nonce so no one else can use it
+       await strapi.services["customer"].update(
         { id },
         { nonce: null }
       );
