@@ -58,8 +58,8 @@ module.exports = {
     } else return { status: "error", messge: "incorrect signature" };
   },
   async createNonce(ctx) {
-    const { address } = ctx.body;
-
+    const { address } = ctx.request.body;
+    // console.log(ctx.request)
     // Check if User Exists in DB
     const customers = await strapi.services["customer"].find({ address });
     let customer;
