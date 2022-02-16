@@ -34,16 +34,16 @@
     },
     {
       "method": "GET",
-      "path": "/customers/nonce/:address",
-      "handler": "customer.getNonce",
+      "path": "/customers/nonce",
+      "handler": "customer.createNonce",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/customers/sign",
-      "handler": "customer.sign",
+      "path": "/customers/signin",
+      "handler": "customer.signIn",
       "config": {
         "policies": []
       }
