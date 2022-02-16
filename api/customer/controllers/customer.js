@@ -15,9 +15,16 @@ module.exports = {
       address: body.address,
     });
     let customer;
+
     if (customers.length <= 0) {
       return { status: "error", messge: "not registered user" };
     } else customer = customers[0];
+    if (!customer.nonce) {
+      return {
+        status: "error",
+        msg: "Please Generate a nonce before signing in",
+      };
+    }
 
     const sig = body.signature;
     const msg = `I am signing my one-time nonce: ${customer.nonce}`;
