@@ -4,17 +4,17 @@
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
  * to customize this controller
  */
-const nodemailer = require("nodemailer");
-const from = "donkey.test.email@gmail.com";
-const to = process.env.SUPPORT_NOTIFY_EMAIL;
+// const nodemailer = require("nodemailer");
+// const from = "donkey.test.email@gmail.com";
+// const to = process.env.SUPPORT_NOTIFY_EMAIL;
 // Create reusable transporter object using SMTP transport.
-const transporter = nodemailer.createTransport({
-  service: "Gmail",
-  auth: {
-    user: from,
-    pass: "qI5rxMq@ukO6",
-  },
-});
+// const transporter = nodemailer.createTransport({
+//   service: "Gmail",
+//   auth: {
+//     user: from,
+//     pass: "qI5rxMq@ukO6",
+//   },
+// });
 
 module.exports = {
   async create(ctx) {
@@ -22,6 +22,7 @@ module.exports = {
     try {
       const suggestion = await strapi.services["suggestion"].create({
         ...body, 
+        status: "unverified",
         customer: ctx.request.user.id
       });
 

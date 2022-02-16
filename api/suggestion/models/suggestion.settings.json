@@ -46,9 +46,10 @@
       "enum": [
         "new",
         "approved",
-        "old"
+        "old",
+        "unverified"
       ],
-      "default": "new"
+      "default": "unverified"
     },
     "comments": {
       "via": "suggestion",
