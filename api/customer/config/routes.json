@@ -21,7 +21,7 @@
       "path": "/customers/:id",
       "handler": "customer.findOne",
       "config": {
-        "policies": []
+        "policies": ["global::is-authenticated"]
       }
     },
     {
@@ -33,7 +33,7 @@
       }
     },
     {
-      "method": "GET",
+      "method": "POST",
       "path": "/customers/nonce",
       "handler": "customer.createNonce",
       "config": {
