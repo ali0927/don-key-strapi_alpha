@@ -74,7 +74,7 @@ module.exports = {
       customer = customers[0];
       if (!customer.nonce) {
         const nonce = Math.floor(Math.random() * 1000000);
-        customer = await strapi.services["customer"].update({ id }, { nonce });
+        customer = await strapi.services["customer"].update({ id: customer.id }, { nonce });
       }
     }
 
