@@ -80,4 +80,14 @@ module.exports = {
 
     return { nonce: customer.nonce };
   },
+  async checkToken(ctx) {
+    const { address } = ctx.request.body;
+    if (ctx.request.user.address === address) { 
+      return { 
+        address: address,
+        exp: ctx.request.user.exp
+      };
+    }
+    return { address: null };
+  }
 };

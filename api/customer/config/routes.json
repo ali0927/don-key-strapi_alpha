@@ -49,6 +49,14 @@
       }
     },
     {
+      "method": "POST",
+      "path": "/customers/checkToken",
+      "handler": "customer.checkToken",
+      "config": {
+        "policies": ["global::is-authenticated"]
+      }
+    },
+    {
       "method": "PUT",
       "path": "/customers/:id",
       "handler": "customer.update",
