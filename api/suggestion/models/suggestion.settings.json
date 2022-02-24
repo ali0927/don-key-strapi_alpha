@@ -47,9 +47,9 @@
         "new",
         "approved",
         "old",
-        "unverified"
+        "banned"
       ],
-      "default": "unverified"
+      "default": "new"
     },
     "comments": {
       "via": "suggestion",

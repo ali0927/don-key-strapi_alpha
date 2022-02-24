@@ -55,5 +55,9 @@ module.exports = {
       console.error(e);
       return { status: 'error' }
     }
+  },
+  async find(ctx) {
+    const suggestions = await strapi.services["suggestion"].find();
+    return suggestions.filter(suggestion => suggestion.status !== 'banned');
   }
 };
